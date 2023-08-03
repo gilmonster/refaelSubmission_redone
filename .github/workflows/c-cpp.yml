@@ -12,6 +12,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: Clean up previous build
+      run: rm -rf build
     - name: Configure CMake
       run: cmake -B build -S .
     - name: Build C++ Project
